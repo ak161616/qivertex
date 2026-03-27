@@ -204,8 +204,7 @@ class OpenAIDirectHandler:
             del openai_params["reasoning_effort"]
         return openai_params
     
-    
-def prepare_extra_body(self) -> Dict[str, Any]:
+    def prepare_extra_body(self) -> Dict[str, Any]:
         """Prepare extra body parameters for OpenAI API call with strict CamelCase for Google."""
         return {
             "extra_body": {
@@ -220,7 +219,7 @@ def prepare_extra_body(self) -> Dict[str, Any]:
             }
         }
     
-async def handle_streaming_response(
+    async def handle_streaming_response(
         self,
         openai_client: Any, # Can be openai.AsyncOpenAI or our wrapper
         openai_params: Dict[str, Any],
