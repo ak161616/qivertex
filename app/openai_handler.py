@@ -220,7 +220,7 @@ def prepare_extra_body(self) -> Dict[str, Any]:
             }
         }
     
-    async def handle_streaming_response(
+async def handle_streaming_response(
         self,
         openai_client: Any, # Can be openai.AsyncOpenAI or our wrapper
         openai_params: Dict[str, Any],
